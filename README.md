@@ -82,7 +82,8 @@ Completamos as funcionalidades iniciais e iniciamos os primeiros testes:
 - Sistema de estoque
 - Cálculo de comissões
 
-![Sprint 3](img/Backlog-do-produto3.png)
+![Captura de tela 2025-07-01 001002](https://github.com/user-attachments/assets/e08323b1-d23a-4b3b-bee3-d0803904d2b7)
+
 
 ---
 
@@ -92,7 +93,8 @@ Iniciamos as funcionalidades mais complexas:
 - Relatórios de vendas
 - Cancelamento de vendas
 
-![Sprint 4](img/Backlog-do-produto4.png)
+![image](https://github.com/user-attachments/assets/f4dc400c-161f-45eb-918d-4b2e36f6dea8)
+
 
 ---
 
@@ -102,7 +104,8 @@ Realizamos testes abrangentes nas novas funcionalidades:
 - Testes de integração
 - Validação de regras de negócio
 
-![Sprint 5](img/Backlog-do-produto5.png)
+![image](https://github.com/user-attachments/assets/1f034b6a-f3c0-4b2e-b926-f94248974a75)
+
 
 ---
 
@@ -112,7 +115,8 @@ Iniciamos o processo de documentação:
 - Manual do usuário básico
 - Revisão dos testes realizados
 
-![Sprint 6](img/Backlog-do-produto6.png)
+![image](https://github.com/user-attachments/assets/226776da-4954-48d6-a02a-ffd09eaa3651)
+
 
 ---
 
@@ -122,7 +126,8 @@ Focamos em melhorias e ajustes:
 - Melhoria na interface
 - Correção de bugs identificados
 
-![Sprint 7](img/Backlog-do-produto7.png)
+![image](https://github.com/user-attachments/assets/fe721120-2a21-4b62-97b8-8802b65115df)
+
 
 ---
 
@@ -132,7 +137,8 @@ Implementamos e testamos o sistema de menus:
 - Submenus
 - Navegação entre funcionalidades
 
-![Sprint 8](img/Backlog-do-produto8.png)
+![image](https://github.com/user-attachments/assets/94f4bdd7-d057-47c9-8888-b2b396f37cc8)
+
 
 ---
 
@@ -142,7 +148,8 @@ Completamos toda a documentação:
 - Manual completo do usuário
 - Guia de instalação
 
-![Sprint 9](img/Backlog-do-produto9.png)
+![image](https://github.com/user-attachments/assets/51c4e093-c4c5-4e94-9670-21e239df60bf)
+
 
 ---
 
@@ -151,83 +158,245 @@ Realizamos a integração completa do sistema:
 - Testes finais
 - Ajustes de integração
 - Preparação para entrega
+- Testes do codigo por inteeiro
 
-![Sprint 10](img/Backlog-do-produto10.png)
+![image](https://github.com/user-attachments/assets/360a6793-3c2d-4271-901e-8c5f4b4b3fe4)
+
 
 ---
 
-# Conclusão
+# Lista de Assinaturas das Funções e Parâmetros
 
-O **VendaFácil** passou por um processo iterativo de desenvolvimento, com foco nas necessidades do usuário e na validação contínua das funcionalidades. Cada sprint foi dedicada ao desenvolvimento de funcionalidades específicas, com ênfase em testes e documentação para garantir a qualidade do sistema final.
+### Explicação da Estrutura de Dados Principal do Programa
 
-
-
-
-### **Backlog Inicial do Produto**:
-
-
-1. **Cadastro de Produtos**
-   - Descrição: Permitir cadastro de novos produtos no sistema com informações como nome, código, preço e quantidade de estoque.
-   - Responsável: Wesley
-   - Prioridade: Alta
-   - Sprint: Sprint 1
-
-2. **Cadastro de Vendedores**
-   - Descrição: Permitir o cadastro de vendedores com informações como número, nome, salário fixo e percentual de comissão.
-   - Responsável: Matheus
-   - Prioridade: Alta
-   - Sprint: Sprint 1
-
-3. **Cadastro de Compradores**
-   - Descrição: Permitir o cadastro de compradores no sistema com informações como nome, CPF, e-mail e endereço.
-   - Responsável: Luiz
-   - Prioridade: Alta
-   - Sprint: Sprint 2
-
-4. **Realização de Vendas**
-   - Descrição: Registrar uma venda no sistema, associando um vendedor, um comprador e os itens vendidos.
-   - Responsável: Nicolas
-   - Prioridade: Alta
-   - Sprint: Sprint 2
-
-5. **Alteração de Produtos**
-   - Descrição: Permitir a alteração dos dados de um produto, como nome, preço e quantidade de estoque.
-   - Responsável: Wesley
-   - Prioridade: Média
-   - Sprint: Sprint 3
-
-6. **Alteração de Vendedores**
-   - Descrição: Permitir a alteração dos dados de um vendedor, como nome, salário e comissão.
-   - Responsável: Matheus
-   - Prioridade: Média
-   - Sprint: Sprint 3
-
-7. **Relatório de Vendas**
-   - Descrição: Gerar relatórios detalhados sobre todas as vendas realizadas.
-   - Responsável: Luiz
-   - Prioridade: Baixa
-   - Sprint: Sprint 4
+As funções e parâmetros utilizados no programa foram:
 
 ---
 
-### **Evolução das Sprints:**
+## *1.* **int main()** - Menu de opções
 
-#### **Sprint 1 (Início)**:
-1. Cadastro de Produtos  
-2. Cadastro de Vendedores  
-
-#### **Sprint 2**:
-1. Cadastro de Compradores  
-2. Realização de Vendas  
-
-#### **Sprint 3**:
-1. Alteração de Produtos  
-2. Alteração de Vendedores  
-
-#### **Sprint 4**:
-1. Relatório de Vendas  
+Função principal que exibe o menu de opções e solicita ao usuário inserir uma opção válida, determinando qual funcionalidade será executada.
 
 ---
+
+## *2.* **int produto_existe(int codigo)**
+
+Função que verifica se um produto com o código informado já existe no sistema. Retorna o índice do produto ou -1 se não encontrado.
+
+---
+
+## *3.* **int vendedor_existe(int numero)**
+
+Função que verifica se um vendedor com o número informado já existe no sistema. Retorna o índice do vendedor ou -1 se não encontrado.
+
+---
+
+## *4.* **int comprador_existe(char *cpf)**
+
+Função que verifica se um comprador com o CPF informado já existe no sistema. Retorna o índice do comprador ou -1 se não encontrado.
+
+---
+
+## *5.* **int venda_existe(int codigo)**
+
+Função que verifica se uma venda com o código informado já existe no sistema. Retorna o índice da venda ou -1 se não encontrado.
+
+---
+
+## *6.* **void limpar_buffer()**
+
+Função que limpa o buffer de entrada do teclado, evitando problemas com leituras subsequentes, especialmente após o uso de `scanf`.
+
+---
+
+## *7.* **int validar_cep(char *cep)**
+
+Função que valida se o CEP informado está no formato correto ("12345-678" ou "12345678"). Retorna 1 se válido e 0 se inválido.
+
+---
+
+## *8.* **void formatar_cep(char *cep)**
+
+Função que formata o CEP informado para o padrão "12345-678" caso seja válido. Caso contrário, não faz nenhuma alteração.
+
+---
+
+## *9.* **void cadastrar_produto()**
+
+Função que permite cadastrar um novo produto no sistema, com informações como nome, código, quantidade em estoque e preço de venda. Verifica se o código do produto já existe.
+
+---
+
+## *10.* **void alterar_produto()**
+
+Função que permite alterar os dados de um produto já cadastrado no sistema, como nome, quantidade em estoque e preço de venda.
+
+---
+
+## *11.* **void excluir_produto()**
+
+Função que permite excluir um produto do sistema, desde que o produto não esteja vinculado a vendas existentes. Caso contrário, exibe uma mensagem de erro.
+
+---
+
+## *12.* **void listar_produtos()**
+
+Função que exibe todos os produtos cadastrados no sistema, com detalhes como código, nome, quantidade em estoque e preço de venda.
+
+---
+
+## *13.* **void cadastrar_vendedor()**
+
+Função que permite cadastrar um novo vendedor no sistema, incluindo dados como nome, número, salário fixo e percentual de comissão.
+
+---
+
+## *14.* **void alterar_vendedor()**
+
+Função que permite alterar os dados de um vendedor já cadastrado no sistema, como nome, número, salário fixo e percentual de comissão.
+
+---
+
+## *15.* **void excluir_vendedor()**
+
+Função que permite excluir um vendedor do sistema, desde que o vendedor não esteja vinculado a nenhuma venda existente.
+
+---
+
+## *16.* **void listar_vendedores()**
+
+Função que exibe todos os vendedores cadastrados no sistema, com informações como número, nome, salário fixo, comissão e comissões acumuladas.
+
+---
+
+## *17.* **void cadastrar_comprador()**
+
+Função que permite cadastrar um novo comprador no sistema, realizando validação de CPF e CEP. Os dados incluem nome, CPF, e-mail e endereço.
+
+---
+
+## *18.* **void alterar_comprador()**
+
+Função que permite alterar os dados de um comprador já cadastrado no sistema, incluindo nome, e-mail e endereço. O CPF não pode ser alterado.
+
+---
+
+## *19.* **void excluir_comprador()**
+
+Função que permite excluir um comprador do sistema, desde que o comprador não esteja vinculado a nenhuma venda existente.
+
+---
+
+## *20.* **void listar_compradores()**
+
+Função que exibe todos os compradores cadastrados no sistema, com informações como CPF, nome, e-mail e endereço.
+
+---
+
+## *21.* **void realizar_venda()**
+
+Função que registra uma nova venda no sistema, associando um vendedor, um comprador e os itens vendidos. Atualiza o estoque e o total da venda, além de calcular a comissão do vendedor.
+
+---
+
+## *22.* **void alterar_venda()**
+
+Função que permite alterar os dados de uma venda já registrada no sistema. Para alterações, é necessário cancelar a venda existente e criar uma nova.
+
+---
+
+## *23.* **void cancelar_venda()**
+
+Função que permite cancelar uma venda registrada, estornando o estoque dos produtos e ajustando as comissões dos vendedores. A venda é removida do sistema.
+
+---
+
+## *24.* **void listar_vendas()**
+
+Função que exibe todas as vendas registradas no sistema, incluindo informações sobre o código da venda, vendedor, comprador e o total da venda. Também lista os itens vendidos.
+
+---
+
+## *25.* **void emitir_nota_fiscal()**
+
+Função que gera uma nota fiscal para uma venda, incluindo todos os itens da venda, dados do comprador e vendedor, e o cálculo do frete. Exibe a nota fiscal com todos os detalhes.
+
+---
+
+## *26.* **void menu_produtos()**
+
+Função que exibe o menu para o gerenciamento de produtos, permitindo ao usuário cadastrar, alterar, excluir ou listar produtos.
+
+---
+
+## *27.* **void menu_vendedores()**
+
+Função que exibe o menu para o gerenciamento de vendedores, permitindo ao usuário cadastrar, alterar, excluir ou listar vendedores.
+
+---
+
+## *28.* **void menu_compradores()**
+
+Função que exibe o menu para o gerenciamento de compradores, permitindo ao usuário cadastrar, alterar, excluir ou listar compradores.
+
+---
+
+## *29.* **void menu_vendas()**
+
+Função que exibe o menu para o gerenciamento de vendas, permitindo ao usuário realizar, alterar, cancelar ou listar vendas. Também possibilita a emissão de notas fiscais.
+
+---
+
+## *30.* **void menu_principal()**
+
+Função que exibe o menu principal do sistema, permitindo ao usuário acessar os menus de gerenciamento de produtos, vendedores, compradores e vendas.
+
+---
+
+## *31.* **int main()**
+
+Função principal do programa que inicia a execução e exibe o menu principal, permitindo a interação do usuário com o sistema.
+
+---
+
+## *32.* **void addPassageiro()**
+
+Função que adiciona um novo passageiro ao sistema, armazenando dados como ID, nome, endereço e fidelidade. Exibe uma mensagem caso o limite de passageiros seja atingido.
+
+---
+
+## *33.* **void adicionar_assento()**
+
+Função que adiciona um novo assento no voo, com a possibilidade de definir o status (livre/ocupado) e associá-lo a um código de voo. Verifica a existência de duplicidade.
+
+---
+
+## *34.* **void consultar_passageiro()**
+
+Função que consulta os dados de um passageiro no sistema, exibindo todas as informações associadas ao mesmo, como nome, CPF, endereço e status de fidelidade.
+
+---
+
+## *35.* **void consultar_voo()**
+
+Função que consulta os voos cadastrados e exibe informações detalhadas sobre eles, como número do voo, data e hora, origem e destino.
+
+---
+
+## *36.* **void liberar_assento()**
+
+Função que altera o status de um assento, marcando-o como disponível, e desvincula o passageiro associado ao assento.
+
+---
+
+## *37.* **void gerar_relatorio_vendas()**
+
+Função que gera um relatório completo das vendas realizadas, detalhando informações sobre os produtos vendidos, os vendedores e compradores, e o valor total das vendas.
+
+---
+
+
+
 
 ## Funcionalidades do Software
 
