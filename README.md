@@ -165,233 +165,83 @@ Realizamos a integração completa do sistema:
 
 ---
 
-# Lista de Assinaturas das Funções e Parâmetros
+#  Funções Auxiliares
 
-### Explicação da Estrutura de Dados Principal do Programa
-
-As funções e parâmetros utilizados no programa foram:
-
----
-
-## *1.* **int main()** - Menu de opções
-
-Função principal que exibe o menu de opções e solicita ao usuário inserir uma opção válida, determinando qual funcionalidade será executada.
-
----
-
-## *2.* **int produto_existe(int codigo)**
-
-Função que verifica se um produto com o código informado já existe no sistema. Retorna o índice do produto ou -1 se não encontrado.
+| Função | O que faz |
+|---|---|
+| `int produto_existe(int codigo)` | Verifica se um produto com o código informado existe no vetor de produtos. Retorna o índice ou -1. |
+| `int vendedor_existe(int numero)` | Verifica se um vendedor com o número informado existe no vetor de vendedores. Retorna o índice ou -1. |
+| `int comprador_existe(char *cpf)` | Verifica se um comprador com o CPF informado existe no vetor de compradores. Retorna o índice ou -1. |
+| `int venda_existe(int codigo)` | Verifica se uma venda com o código informado já existe. Retorna o índice ou -1. |
+| `void limpar_buffer()` | Limpa o buffer do `stdin` após uma leitura para evitar problemas de entrada de dados. |
+| `int validar_cep(char *cep)` | Valida se o CEP contém exatamente 8 dígitos no formato 12345678 ou 12345-678. Retorna 1 se válido, 0 se inválido. |
+| `void formatar_cep(char *cep)` | Formata o CEP para o formato 12345-678. |
 
 ---
 
-## *3.* **int vendedor_existe(int numero)**
+#  Funções para Produtos
 
-Função que verifica se um vendedor com o número informado já existe no sistema. Retorna o índice do vendedor ou -1 se não encontrado.
-
----
-
-## *4.* **int comprador_existe(char *cpf)**
-
-Função que verifica se um comprador com o CPF informado já existe no sistema. Retorna o índice do comprador ou -1 se não encontrado.
-
----
-
-## *5.* **int venda_existe(int codigo)**
-
-Função que verifica se uma venda com o código informado já existe no sistema. Retorna o índice da venda ou -1 se não encontrado.
+| Função | O que faz |
+|---|---|
+| `void cadastrar_produto()` | Cadastra um novo produto, pedindo nome, código, estoque e preço. Verifica se o código já existe. |
+| `void alterar_produto()` | Altera dados de um produto existente. Campos podem ser mantidos deixando em branco. |
+| `void excluir_produto()` | Exclui um produto se ele não estiver vinculado a nenhuma venda. |
+| `void listar_produtos()` | Lista todos os produtos cadastrados. |
 
 ---
 
-## *6.* **void limpar_buffer()**
+#  Funções para Vendedores
 
-Função que limpa o buffer de entrada do teclado, evitando problemas com leituras subsequentes, especialmente após o uso de `scanf`.
-
----
-
-## *7.* **int validar_cep(char *cep)**
-
-Função que valida se o CEP informado está no formato correto ("12345-678" ou "12345678"). Retorna 1 se válido e 0 se inválido.
-
----
-
-## *8.* **void formatar_cep(char *cep)**
-
-Função que formata o CEP informado para o padrão "12345-678" caso seja válido. Caso contrário, não faz nenhuma alteração.
+| Função | O que faz |
+|---|---|
+| `void cadastrar_vendedor()` | Cadastra um novo vendedor, com nome, número, salário fixo e percentual de comissão. |
+| `void alterar_vendedor()` | Altera nome e salário fixo de um vendedor. Percentual de comissão é mantido. |
+| `void excluir_vendedor()` | Exclui um vendedor se ele não estiver vinculado a vendas. |
+| `void listar_vendedores()` | Lista todos os vendedores com dados completos e comissões acumuladas. |
 
 ---
 
-## *9.* **void cadastrar_produto()**
+#  Funções para Compradores
 
-Função que permite cadastrar um novo produto no sistema, com informações como nome, código, quantidade em estoque e preço de venda. Verifica se o código do produto já existe.
-
----
-
-## *10.* **void alterar_produto()**
-
-Função que permite alterar os dados de um produto já cadastrado no sistema, como nome, quantidade em estoque e preço de venda.
-
----
-
-## *11.* **void excluir_produto()**
-
-Função que permite excluir um produto do sistema, desde que o produto não esteja vinculado a vendas existentes. Caso contrário, exibe uma mensagem de erro.
+| Função | O que faz |
+|---|---|
+| `void cadastrar_comprador()` | Cadastra um comprador, incluindo validação e formatação de CEP. |
+| `void alterar_comprador()` | Altera dados do comprador e do endereço. |
+| `void excluir_comprador()` | Exclui um comprador se ele não estiver vinculado a vendas. |
+| `void listar_compradores()` | Lista todos os compradores com endereço completo. |
 
 ---
 
-## *12.* **void listar_produtos()**
+#  Funções para Vendas
 
-Função que exibe todos os produtos cadastrados no sistema, com detalhes como código, nome, quantidade em estoque e preço de venda.
-
----
-
-## *13.* **void cadastrar_vendedor()**
-
-Função que permite cadastrar um novo vendedor no sistema, incluindo dados como nome, número, salário fixo e percentual de comissão.
-
----
-
-## *14.* **void alterar_vendedor()**
-
-Função que permite alterar os dados de um vendedor já cadastrado no sistema, como nome, número, salário fixo e percentual de comissão.
+| Função | O que faz |
+|---|---|
+| `void realizar_venda()` | Registra uma nova venda: escolhe vendedor, comprador e produtos, atualiza estoque e comissão. |
+| `void alterar_venda()` | Exibe os dados de uma venda existente e orienta cancelar e recriar se necessário. |
+| `void cancelar_venda()` | Cancela uma venda, devolve produtos ao estoque e retira comissão do vendedor. |
+| `void listar_vendas()` | Lista todas as vendas com detalhes dos itens. |
+| `void emitir_nota_fiscal()` | Emite uma nota fiscal detalhada, com cálculo de frete e resumo dos produtos vendidos. |
 
 ---
 
-## *15.* **void excluir_vendedor()**
+#  Menus de Navegação
 
-Função que permite excluir um vendedor do sistema, desde que o vendedor não esteja vinculado a nenhuma venda existente.
-
----
-
-## *16.* **void listar_vendedores()**
-
-Função que exibe todos os vendedores cadastrados no sistema, com informações como número, nome, salário fixo, comissão e comissões acumuladas.
-
----
-
-## *17.* **void cadastrar_comprador()**
-
-Função que permite cadastrar um novo comprador no sistema, realizando validação de CPF e CEP. Os dados incluem nome, CPF, e-mail e endereço.
+| Função | O que faz |
+|---|---|
+| `void menu_produtos()` | Menu para cadastrar, alterar, excluir e listar produtos. |
+| `void menu_vendedores()` | Menu para operações com vendedores. |
+| `void menu_compradores()` | Menu para operações com compradores. |
+| `void menu_vendas()` | Menu para operações com vendas e nota fiscal. |
+| `void menu_principal()` | Menu principal do sistema para acessar todos os outros. |
 
 ---
 
-## *18.* **void alterar_comprador()**
+#  Função Principal
 
-Função que permite alterar os dados de um comprador já cadastrado no sistema, incluindo nome, e-mail e endereço. O CPF não pode ser alterado.
+| Função | O que faz |
+|---|---|
+| `int main()` | Inicia o programa, chamando `menu_principal()`. |
 
----
-
-## *19.* **void excluir_comprador()**
-
-Função que permite excluir um comprador do sistema, desde que o comprador não esteja vinculado a nenhuma venda existente.
-
----
-
-## *20.* **void listar_compradores()**
-
-Função que exibe todos os compradores cadastrados no sistema, com informações como CPF, nome, e-mail e endereço.
-
----
-
-## *21.* **void realizar_venda()**
-
-Função que registra uma nova venda no sistema, associando um vendedor, um comprador e os itens vendidos. Atualiza o estoque e o total da venda, além de calcular a comissão do vendedor.
-
----
-
-## *22.* **void alterar_venda()**
-
-Função que permite alterar os dados de uma venda já registrada no sistema. Para alterações, é necessário cancelar a venda existente e criar uma nova.
-
----
-
-## *23.* **void cancelar_venda()**
-
-Função que permite cancelar uma venda registrada, estornando o estoque dos produtos e ajustando as comissões dos vendedores. A venda é removida do sistema.
-
----
-
-## *24.* **void listar_vendas()**
-
-Função que exibe todas as vendas registradas no sistema, incluindo informações sobre o código da venda, vendedor, comprador e o total da venda. Também lista os itens vendidos.
-
----
-
-## *25.* **void emitir_nota_fiscal()**
-
-Função que gera uma nota fiscal para uma venda, incluindo todos os itens da venda, dados do comprador e vendedor, e o cálculo do frete. Exibe a nota fiscal com todos os detalhes.
-
----
-
-## *26.* **void menu_produtos()**
-
-Função que exibe o menu para o gerenciamento de produtos, permitindo ao usuário cadastrar, alterar, excluir ou listar produtos.
-
----
-
-## *27.* **void menu_vendedores()**
-
-Função que exibe o menu para o gerenciamento de vendedores, permitindo ao usuário cadastrar, alterar, excluir ou listar vendedores.
-
----
-
-## *28.* **void menu_compradores()**
-
-Função que exibe o menu para o gerenciamento de compradores, permitindo ao usuário cadastrar, alterar, excluir ou listar compradores.
-
----
-
-## *29.* **void menu_vendas()**
-
-Função que exibe o menu para o gerenciamento de vendas, permitindo ao usuário realizar, alterar, cancelar ou listar vendas. Também possibilita a emissão de notas fiscais.
-
----
-
-## *30.* **void menu_principal()**
-
-Função que exibe o menu principal do sistema, permitindo ao usuário acessar os menus de gerenciamento de produtos, vendedores, compradores e vendas.
-
----
-
-## *31.* **int main()**
-
-Função principal do programa que inicia a execução e exibe o menu principal, permitindo a interação do usuário com o sistema.
-
----
-
-## *32.* **void addPassageiro()**
-
-Função que adiciona um novo passageiro ao sistema, armazenando dados como ID, nome, endereço e fidelidade. Exibe uma mensagem caso o limite de passageiros seja atingido.
-
----
-
-## *33.* **void adicionar_assento()**
-
-Função que adiciona um novo assento no voo, com a possibilidade de definir o status (livre/ocupado) e associá-lo a um código de voo. Verifica a existência de duplicidade.
-
----
-
-## *34.* **void consultar_passageiro()**
-
-Função que consulta os dados de um passageiro no sistema, exibindo todas as informações associadas ao mesmo, como nome, CPF, endereço e status de fidelidade.
-
----
-
-## *35.* **void consultar_voo()**
-
-Função que consulta os voos cadastrados e exibe informações detalhadas sobre eles, como número do voo, data e hora, origem e destino.
-
----
-
-## *36.* **void liberar_assento()**
-
-Função que altera o status de um assento, marcando-o como disponível, e desvincula o passageiro associado ao assento.
-
----
-
-## *37.* **void gerar_relatorio_vendas()**
-
-Função que gera um relatório completo das vendas realizadas, detalhando informações sobre os produtos vendidos, os vendedores e compradores, e o valor total das vendas.
 
 ---
 
