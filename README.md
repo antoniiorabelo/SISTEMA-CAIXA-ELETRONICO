@@ -59,7 +59,8 @@ O **VendaFácil** é um sistema de gerenciamento de vendas desenvolvido para oti
 # Sprint 1: Planejamento Inicial
 Na primeira sprint, realizamos a análise de requisitos e divisão de tarefas entre os membros da equipe. Definimos níveis de dificuldade, tempo estimado, tamanho e prioridade para cada tarefa.
 
-![Captura de tela 2025-06-25 221757](https://github.com/user-attachments/assets/b93add7d-9d62-49f4-8b64-0bf333ee8b45)
+![Captura de tela 2025-06-24 165148](https://github.com/user-attachments/assets/b2f16a28-4676-46da-881b-a10a9ac4b383)
+
 
 
 ---
@@ -70,7 +71,8 @@ Iniciamos o desenvolvimento do código com as funcionalidades principais:
 - Cadastro de vendedores
 - Realização de vendas básicas
 
-![Sprint 2](img/Backlog-do-produto2.png)
+![Captura de tela 2025-06-25 221757](https://github.com/user-attachments/assets/029235e1-ca50-45da-b1b1-89f5636b61ce)
+
 
 ---
 
@@ -80,7 +82,8 @@ Completamos as funcionalidades iniciais e iniciamos os primeiros testes:
 - Sistema de estoque
 - Cálculo de comissões
 
-![Sprint 3](img/Backlog-do-produto3.png)
+![Captura de tela 2025-07-01 001002](https://github.com/user-attachments/assets/e08323b1-d23a-4b3b-bee3-d0803904d2b7)
+
 
 ---
 
@@ -90,7 +93,8 @@ Iniciamos as funcionalidades mais complexas:
 - Relatórios de vendas
 - Cancelamento de vendas
 
-![Sprint 4](img/Backlog-do-produto4.png)
+![image](https://github.com/user-attachments/assets/f4dc400c-161f-45eb-918d-4b2e36f6dea8)
+
 
 ---
 
@@ -100,7 +104,8 @@ Realizamos testes abrangentes nas novas funcionalidades:
 - Testes de integração
 - Validação de regras de negócio
 
-![Sprint 5](img/Backlog-do-produto5.png)
+![image](https://github.com/user-attachments/assets/1f034b6a-f3c0-4b2e-b926-f94248974a75)
+
 
 ---
 
@@ -110,7 +115,8 @@ Iniciamos o processo de documentação:
 - Manual do usuário básico
 - Revisão dos testes realizados
 
-![Sprint 6](img/Backlog-do-produto6.png)
+![image](https://github.com/user-attachments/assets/226776da-4954-48d6-a02a-ffd09eaa3651)
+
 
 ---
 
@@ -120,7 +126,8 @@ Focamos em melhorias e ajustes:
 - Melhoria na interface
 - Correção de bugs identificados
 
-![Sprint 7](img/Backlog-do-produto7.png)
+![image](https://github.com/user-attachments/assets/fe721120-2a21-4b62-97b8-8802b65115df)
+
 
 ---
 
@@ -130,7 +137,8 @@ Implementamos e testamos o sistema de menus:
 - Submenus
 - Navegação entre funcionalidades
 
-![Sprint 8](img/Backlog-do-produto8.png)
+![image](https://github.com/user-attachments/assets/94f4bdd7-d057-47c9-8888-b2b396f37cc8)
+
 
 ---
 
@@ -140,7 +148,8 @@ Completamos toda a documentação:
 - Manual completo do usuário
 - Guia de instalação
 
-![Sprint 9](img/Backlog-do-produto9.png)
+![image](https://github.com/user-attachments/assets/51c4e093-c4c5-4e94-9670-21e239df60bf)
+
 
 ---
 
@@ -149,83 +158,95 @@ Realizamos a integração completa do sistema:
 - Testes finais
 - Ajustes de integração
 - Preparação para entrega
+- Testes do codigo por inteeiro
 
-![Sprint 10](img/Backlog-do-produto10.png)
+![image](https://github.com/user-attachments/assets/360a6793-3c2d-4271-901e-8c5f4b4b3fe4)
+
 
 ---
 
-# Conclusão
+#  Funções Auxiliares
 
-O **VendaFácil** passou por um processo iterativo de desenvolvimento, com foco nas necessidades do usuário e na validação contínua das funcionalidades. Cada sprint foi dedicada ao desenvolvimento de funcionalidades específicas, com ênfase em testes e documentação para garantir a qualidade do sistema final.
-
-
-
-
-### **Backlog Inicial do Produto**:
-
-
-1. **Cadastro de Produtos**
-   - Descrição: Permitir cadastro de novos produtos no sistema com informações como nome, código, preço e quantidade de estoque.
-   - Responsável: Wesley
-   - Prioridade: Alta
-   - Sprint: Sprint 1
-
-2. **Cadastro de Vendedores**
-   - Descrição: Permitir o cadastro de vendedores com informações como número, nome, salário fixo e percentual de comissão.
-   - Responsável: Matheus
-   - Prioridade: Alta
-   - Sprint: Sprint 1
-
-3. **Cadastro de Compradores**
-   - Descrição: Permitir o cadastro de compradores no sistema com informações como nome, CPF, e-mail e endereço.
-   - Responsável: Luiz
-   - Prioridade: Alta
-   - Sprint: Sprint 2
-
-4. **Realização de Vendas**
-   - Descrição: Registrar uma venda no sistema, associando um vendedor, um comprador e os itens vendidos.
-   - Responsável: Nicolas
-   - Prioridade: Alta
-   - Sprint: Sprint 2
-
-5. **Alteração de Produtos**
-   - Descrição: Permitir a alteração dos dados de um produto, como nome, preço e quantidade de estoque.
-   - Responsável: Wesley
-   - Prioridade: Média
-   - Sprint: Sprint 3
-
-6. **Alteração de Vendedores**
-   - Descrição: Permitir a alteração dos dados de um vendedor, como nome, salário e comissão.
-   - Responsável: Matheus
-   - Prioridade: Média
-   - Sprint: Sprint 3
-
-7. **Relatório de Vendas**
-   - Descrição: Gerar relatórios detalhados sobre todas as vendas realizadas.
-   - Responsável: Luiz
-   - Prioridade: Baixa
-   - Sprint: Sprint 4
+| Função | O que faz |
+|---|---|
+| `int produto_existe(int codigo)` | Verifica se um produto com o código informado existe no vetor de produtos. Retorna o índice ou -1. |
+| `int vendedor_existe(int numero)` | Verifica se um vendedor com o número informado existe no vetor de vendedores. Retorna o índice ou -1. |
+| `int comprador_existe(char *cpf)` | Verifica se um comprador com o CPF informado existe no vetor de compradores. Retorna o índice ou -1. |
+| `int venda_existe(int codigo)` | Verifica se uma venda com o código informado já existe. Retorna o índice ou -1. |
+| `void limpar_buffer()` | Limpa o buffer do `stdin` após uma leitura para evitar problemas de entrada de dados. |
+| `int validar_cep(char *cep)` | Valida se o CEP contém exatamente 8 dígitos no formato 12345678 ou 12345-678. Retorna 1 se válido, 0 se inválido. |
+| `void formatar_cep(char *cep)` | Formata o CEP para o formato 12345-678. |
 
 ---
 
-### **Evolução das Sprints:**
+#  Funções para Produtos
 
-#### **Sprint 1 (Início)**:
-1. Cadastro de Produtos  
-2. Cadastro de Vendedores  
-
-#### **Sprint 2**:
-1. Cadastro de Compradores  
-2. Realização de Vendas  
-
-#### **Sprint 3**:
-1. Alteração de Produtos  
-2. Alteração de Vendedores  
-
-#### **Sprint 4**:
-1. Relatório de Vendas  
+| Função | O que faz |
+|---|---|
+| `void cadastrar_produto()` | Cadastra um novo produto, pedindo nome, código, estoque e preço. Verifica se o código já existe. |
+| `void alterar_produto()` | Altera dados de um produto existente. Campos podem ser mantidos deixando em branco. |
+| `void excluir_produto()` | Exclui um produto se ele não estiver vinculado a nenhuma venda. |
+| `void listar_produtos()` | Lista todos os produtos cadastrados. |
 
 ---
+
+#  Funções para Vendedores
+
+| Função | O que faz |
+|---|---|
+| `void cadastrar_vendedor()` | Cadastra um novo vendedor, com nome, número, salário fixo e percentual de comissão. |
+| `void alterar_vendedor()` | Altera nome e salário fixo de um vendedor. Percentual de comissão é mantido. |
+| `void excluir_vendedor()` | Exclui um vendedor se ele não estiver vinculado a vendas. |
+| `void listar_vendedores()` | Lista todos os vendedores com dados completos e comissões acumuladas. |
+
+---
+
+#  Funções para Compradores
+
+| Função | O que faz |
+|---|---|
+| `void cadastrar_comprador()` | Cadastra um comprador, incluindo validação e formatação de CEP. |
+| `void alterar_comprador()` | Altera dados do comprador e do endereço. |
+| `void excluir_comprador()` | Exclui um comprador se ele não estiver vinculado a vendas. |
+| `void listar_compradores()` | Lista todos os compradores com endereço completo. |
+
+---
+
+#  Funções para Vendas
+
+| Função | O que faz |
+|---|---|
+| `void realizar_venda()` | Registra uma nova venda: escolhe vendedor, comprador e produtos, atualiza estoque e comissão. |
+| `void alterar_venda()` | Exibe os dados de uma venda existente e orienta cancelar e recriar se necessário. |
+| `void cancelar_venda()` | Cancela uma venda, devolve produtos ao estoque e retira comissão do vendedor. |
+| `void listar_vendas()` | Lista todas as vendas com detalhes dos itens. |
+| `void emitir_nota_fiscal()` | Emite uma nota fiscal detalhada, com cálculo de frete e resumo dos produtos vendidos. |
+
+---
+
+#  Menus de Navegação
+
+| Função | O que faz |
+|---|---|
+| `void menu_produtos()` | Menu para cadastrar, alterar, excluir e listar produtos. |
+| `void menu_vendedores()` | Menu para operações com vendedores. |
+| `void menu_compradores()` | Menu para operações com compradores. |
+| `void menu_vendas()` | Menu para operações com vendas e nota fiscal. |
+| `void menu_principal()` | Menu principal do sistema para acessar todos os outros. |
+
+---
+
+#  Função Principal
+
+| Função | O que faz |
+|---|---|
+| `int main()` | Inicia o programa, chamando `menu_principal()`. |
+
+
+---
+
+
+
 
 ## Funcionalidades do Software
 
@@ -466,5 +487,3 @@ Se precisar de mais alguma alteração ou ajuste, estou à disposição!
 ---
 
 Este é o **relatório completo de testes** para as funcionalidades de **Produto**, **Vendedor**, **Comprador**, e **Venda** do sistema de gerenciamento de vendas. Ele inclui os **casos de teste** detalhados, o **planejamento dos testes** com entradas, resultados esperados e as saídas obtidas durante a execução.
-
-
