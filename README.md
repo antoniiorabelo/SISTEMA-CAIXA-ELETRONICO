@@ -1,21 +1,27 @@
-# Trabalho-Prático - Sistema de Vendas
+# Trabalho-Prático - VendaFácil
 
-Pontifícia Universidade Católica de Minas Gerais  
+Pontifícia Universidade Católica de Minas Gerais 
+
 Instituto de Ciências Exatas e Informática  
+
 Curso de Engenharia de Software  
-Disciplinas: Algoritmos e Estruturas de Dados I / Fundamentos de Engenharia de Software  
-Professores: Carlos Ribas e Laerte  
-Entrega: 15/12/2024  
+
+Disciplinas: Algoritmos e Estruturas de Dados I / Fundamentos de Engenharia de Software 
+
+Professores: Carlos Ribas e Laerte       Entrega: 02/07/2025  
+
 Valor: 10 pontos  
 
 ### Integrantes:
+
 - [Antonio Rabelo](https://github.com/antoniiorabelo)  
 - [Pedro Lucas](https://github.com/pedrolsrt)  
 
----
 
-# Objetivo:
-O objetivo do **Sistema de Gerenciamento de Vendas** é automatizar o processo de controle de dados para uma empresa de vendas, substituindo os métodos manuais antigos. O software foi desenvolvido em C, com foco em fornecer uma interface intuitiva para gerenciar produtos, vendedores, compradores, vendas e outras funcionalidades essenciais.
+## Objetivo do Projeto VendaFácil
+
+O **VendaFácil** é um sistema de gerenciamento de vendas criado para simplificar e automatizar processos como cadastro de produtos, vendedores e compradores, controle de estoque e comissões. Com uma interface intuitiva, o sistema visa otimizar o tempo das equipes de vendas e melhorar a gestão de vendas, permitindo maior eficiência e precisão nas operações comerciais.
+
 
 # Video de Demonstração:
 [![Demonstração](https://img.youtube.com/vi/X9ePBc_Ke90/0.jpg)](https://www.youtube.com/watch?v=X9ePBc_Ke90)
@@ -24,9 +30,15 @@ O objetivo do **Sistema de Gerenciamento de Vendas** é automatizar o processo d
 
 # Backlog do Produto
 
+##Fotos das reuniões:
+
+#Reunião 1
+
+
 ## Evolução do Backlog de Produto
 
 ### **Backlog Inicial do Produto**:
+
 
 1. **Cadastro de Produtos**
    - Descrição: Permitir cadastro de novos produtos no sistema com informações como nome, código, preço e quantidade de estoque.
