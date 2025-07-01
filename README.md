@@ -30,18 +30,18 @@ O **VendaFácil** é um sistema de gerenciamento de vendas criado para simplific
 
 # Backlog do Produto
 
-##Fotos das reuniões:
+## Fotos das reuniões:
 
-#Reunião 1
+# Reunião 1
 ![Captura de tela 2025-06-25 221757](https://github.com/user-attachments/assets/b93add7d-9d62-49f4-8b64-0bf333ee8b45)
 
-#Reunião 2
+# Reunião 2
 ![Captura de tela 2025-06-25 223219](https://github.com/user-attachments/assets/ea5bb438-8b49-42c7-b788-4022813fa6da)
 
-#Reunião 3 
+# Reunião 3 
 ![Captura de tela 2025-06-30 194312](https://github.com/user-attachments/assets/c023e0c6-7cf8-458e-a02c-ada29bdc511b)
 
-#Reunião 4
+# Reunião 4
 ![Captura de tela 2025-06-30 194312](https://github.com/user-attachments/assets/7bdbbb2b-b3f7-4b90-a20b-525a96051b8b)
 
 
@@ -59,7 +59,7 @@ O **VendaFácil** é um sistema de gerenciamento de vendas desenvolvido para oti
 # Sprint 1: Planejamento Inicial
 Na primeira sprint, realizamos a análise de requisitos e divisão de tarefas entre os membros da equipe. Definimos níveis de dificuldade, tempo estimado, tamanho e prioridade para cada tarefa.
 
-![Sprint 1](img/Backlog-do-produto.png)
+!SISTEMA-CAIXA-ELETRONICO/BACKLOG DO PRODUTO/Captura de tela 2025-06-24 165148.png
 
 ---
 
