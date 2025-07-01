@@ -71,7 +71,8 @@ Iniciamos o desenvolvimento do código com as funcionalidades principais:
 - Cadastro de vendedores
 - Realização de vendas básicas
 
-![Sprint 2](img/Backlog-do-produto2.png)
+![Captura de tela 2025-06-25 221757](https://github.com/user-attachments/assets/029235e1-ca50-45da-b1b1-89f5636b61ce)
+
 
 ---
 
