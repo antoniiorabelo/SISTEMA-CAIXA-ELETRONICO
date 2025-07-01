@@ -33,9 +33,132 @@ O **VendaFácil** é um sistema de gerenciamento de vendas criado para simplific
 ##Fotos das reuniões:
 
 #Reunião 1
+![Captura de tela 2025-06-25 221757](https://github.com/user-attachments/assets/b93add7d-9d62-49f4-8b64-0bf333ee8b45)
+
+#Reunião 2
+![Captura de tela 2025-06-25 223219](https://github.com/user-attachments/assets/ea5bb438-8b49-42c7-b788-4022813fa6da)
+
+#Reunião 3 
+![Captura de tela 2025-06-30 194312](https://github.com/user-attachments/assets/c023e0c6-7cf8-458e-a02c-ada29bdc511b)
+
+#Reunião 4
+![Captura de tela 2025-06-30 194312](https://github.com/user-attachments/assets/7bdbbb2b-b3f7-4b90-a20b-525a96051b8b)
 
 
-## Evolução do Backlog de Produto
+
+# Documentação do Sistema de Vendas - **VendaFácil**
+
+## Objetivo
+
+O **VendaFácil** é um sistema de gerenciamento de vendas desenvolvido para otimizar e automatizar processos de vendas, incluindo o cadastro de produtos, vendedores e compradores, a realização de vendas, o cálculo de comissões, a emissão de notas fiscais, e a gestão de estoque. O sistema oferece uma interface intuitiva para que as equipes de vendas possam realizar suas tarefas com maior eficiência e sem erros manuais.
+
+---
+
+# Backlog do Produto
+
+# Sprint 1: Planejamento Inicial
+Na primeira sprint, realizamos a análise de requisitos e divisão de tarefas entre os membros da equipe. Definimos níveis de dificuldade, tempo estimado, tamanho e prioridade para cada tarefa.
+
+![Sprint 1](img/Backlog-do-produto.png)
+
+---
+
+# Sprint 2: Desenvolvimento das Funcionalidades Básicas
+Iniciamos o desenvolvimento do código com as funcionalidades principais:
+- Cadastro de produtos
+- Cadastro de vendedores
+- Realização de vendas básicas
+
+![Sprint 2](img/Backlog-do-produto2.png)
+
+---
+
+# Sprint 3: Finalização das Funcionalidades Básicas
+Completamos as funcionalidades iniciais e iniciamos os primeiros testes:
+- Cadastro de compradores
+- Sistema de estoque
+- Cálculo de comissões
+
+![Sprint 3](img/Backlog-do-produto3.png)
+
+---
+
+# Sprint 4: Desenvolvimento de Funcionalidades Avançadas
+Iniciamos as funcionalidades mais complexas:
+- Nota fiscal
+- Relatórios de vendas
+- Cancelamento de vendas
+
+![Sprint 4](img/Backlog-do-produto4.png)
+
+---
+
+# Sprint 5: Testes das Funcionalidades Avançadas
+Realizamos testes abrangentes nas novas funcionalidades:
+- Testes unitários
+- Testes de integração
+- Validação de regras de negócio
+
+![Sprint 5](img/Backlog-do-produto5.png)
+
+---
+
+# Sprint 6: Documentação Inicial
+Iniciamos o processo de documentação:
+- Documentação de código
+- Manual do usuário básico
+- Revisão dos testes realizados
+
+![Sprint 6](img/Backlog-do-produto6.png)
+
+---
+
+# Sprint 7: Refinamento e Otimização
+Focamos em melhorias e ajustes:
+- Otimização de performance
+- Melhoria na interface
+- Correção de bugs identificados
+
+![Sprint 7](img/Backlog-do-produto7.png)
+
+---
+
+# Sprint 8: Desenvolvimento do Menu Principal
+Implementamos e testamos o sistema de menus:
+- Menu principal
+- Submenus
+- Navegação entre funcionalidades
+
+![Sprint 8](img/Backlog-do-produto8.png)
+
+---
+
+# Sprint 9: Finalização da Documentação
+Completamos toda a documentação:
+- Documentação técnica
+- Manual completo do usuário
+- Guia de instalação
+
+![Sprint 9](img/Backlog-do-produto9.png)
+
+---
+
+# Sprint 10: Integração Final
+Realizamos a integração completa do sistema:
+- Testes finais
+- Ajustes de integração
+- Preparação para entrega
+
+![Sprint 10](img/Backlog-do-produto10.png)
+
+---
+
+# Conclusão
+
+O **VendaFácil** passou por um processo iterativo de desenvolvimento, com foco nas necessidades do usuário e na validação contínua das funcionalidades. Cada sprint foi dedicada ao desenvolvimento de funcionalidades específicas, com ênfase em testes e documentação para garantir a qualidade do sistema final.
+
+
+
 
 ### **Backlog Inicial do Produto**:
 
