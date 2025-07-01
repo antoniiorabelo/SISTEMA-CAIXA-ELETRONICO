@@ -329,25 +329,6 @@ Se precisar de mais alguma alteração ou ajuste, estou à disposição!
 
 ---
 
-# Relatório de Execução de Testes
-
-### **Função Testada**: Cadastrar Produto
-
-| Entrada           | Resultado Esperado   | Resultado Obtido    | Aprovado? |
-|-------------------|----------------------|---------------------|-----------|
-| Código: 1001      | Produto cadastrado    | Produto cadastrado   | Sim       |
-| Novo preço: 12.99 | Preço alterado       | Preço alterado      | Sim       |
-| Código: 1001      | Produto excluído     | Produto excluído    | Sim       |
-
-### **Função Testada**: Realizar Venda
-
-| Entrada           | Resultado Esperado   | Resultado Obtido    | Aprovado? |
-|-------------------|----------------------|---------------------|-----------|
-| Quantidade: 5     | Item adicionado      | Item adicionado     | Sim       |
-| Código: 5001      | Venda registrada     | Venda registrada    | Sim       |
-
----
-
 Este é o **relatório completo de testes** para as funcionalidades de **Produto**, **Vendedor**, **Comprador**, e **Venda** do sistema de gerenciamento de vendas. Ele inclui os **casos de teste** detalhados, o **planejamento dos testes** com entradas, resultados esperados e as saídas obtidas durante a execução.
 
 
