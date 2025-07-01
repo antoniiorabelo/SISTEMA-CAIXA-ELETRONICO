@@ -59,7 +59,8 @@ O **VendaFácil** é um sistema de gerenciamento de vendas desenvolvido para oti
 # Sprint 1: Planejamento Inicial
 Na primeira sprint, realizamos a análise de requisitos e divisão de tarefas entre os membros da equipe. Definimos níveis de dificuldade, tempo estimado, tamanho e prioridade para cada tarefa.
 
-![Captura de tela 2025-06-25 221757](https://github.com/user-attachments/assets/b93add7d-9d62-49f4-8b64-0bf333ee8b45)
+![Captura de tela 2025-06-24 165148](https://github.com/user-attachments/assets/b2f16a28-4676-46da-881b-a10a9ac4b383)
+
 
 
 ---
