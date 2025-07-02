@@ -1,5 +1,9 @@
-#include "munit.h"
+#include <stdio.h>
 #include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include "../munit/munit.h"
+#include "../munit/munit.c"
 
 // Fixture para inicialização do ambiente de teste
 static void* setup(const MunitParameter params[], void* user_data) {

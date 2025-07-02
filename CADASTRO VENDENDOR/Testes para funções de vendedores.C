@@ -1,3 +1,9 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include "../munit/munit.h"
+#include "../munit/munit.c"
 /* Teste para cadastrar_vendedor() */
 static MunitResult test_cadastrar_vendedor(const MunitParameter params[], void* fixture) {
     num_vendedores = 0;

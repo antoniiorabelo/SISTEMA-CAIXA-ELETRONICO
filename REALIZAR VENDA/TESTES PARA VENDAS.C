@@ -1,5 +1,9 @@
-#include "munit.h"
-#include "venda.h"
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include "../munit/munit.h"
+#include "../munit/munit.c"
 
 static MunitResult test_realizar_venda(const MunitParameter params[], void* fixture) {
     // Configura ambiente de teste
