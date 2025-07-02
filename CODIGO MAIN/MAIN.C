@@ -1092,7 +1092,7 @@ void menu_principal() {
     int opcao;
 
     do {
-        printf("\n=== SISTEMA DE VENDAS ===\n");
+        printf("\n=== SISTEMA DE VENDAS - VENDAFACIL ===\n");
         printf("1. Gerenciar Produtos\n");
         printf("2. Gerenciar Vendedores\n");
         printf("3. Gerenciar Compradores\n");
