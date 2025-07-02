@@ -24,7 +24,7 @@ O **VendaFácil** é um sistema de gerenciamento de vendas criado para simplific
 
 
 # Video de Demonstração:
-[![Demonstração](https://img.youtube.com/vi/X9ePBc_Ke90/0.jpg)](https://www.youtube.com/watch?v=X9ePBc_Ke90)
+[![Demonstração](https://img.youtube.com/vi/X9ePBc_Ke90/0.jpg)]([[https://www.youtube.com/watch?v=X9ePBc_Ke90](https://youtu.be/ZhgRpyunxF8)](https://youtu.be/fTxO6ZXFi2M?si=KlIuAzkQWGqqwj9V))
 
 ---
 
