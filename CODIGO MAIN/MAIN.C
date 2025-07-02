@@ -692,21 +692,186 @@ void alterar_venda() {
         return;
     }
 
-    printf("\nDados atuais da venda:\n");
-    printf("Codigo: %d\n", vendas[idx].codigo);
-    printf("Vendedor: %d\n", vendas[idx].codigo_vendedor);
-    printf("Comprador: %s\n", vendas[idx].cpf_comprador);
-    printf("Total: R$ %.2f\n", vendas[idx].total_venda);
+    int opcao;
+    do {
+        printf("\nDados da venda %d:\n", vendas[idx].codigo);
+        printf("Vendedor: %d\n", vendas[idx].codigo_vendedor);
+        printf("Comprador: %s\n", vendas[idx].cpf_comprador);
+        printf("Total: R$ %.2f\n", vendas[idx].total_venda);
 
-    printf("\nItens da venda:\n");
-    for (int i = 0; i < vendas[idx].num_itens; i++) {
-        printf("  %s (Cod: %d) - %d x R$ %.2f = R$ %.2f\n",
-               vendas[idx].itens[i].nome_produto, vendas[idx].itens[i].codigo_produto,
-               vendas[idx].itens[i].quantidade_vendida, vendas[idx].itens[i].preco_unitario,
-               vendas[idx].itens[i].preco_total);
-    }
+        printf("\nItens da venda:\n");
+        for (int i = 0; i < vendas[idx].num_itens; i++) {
+            printf("%d. %s (Cod: %d) - %d x R$ %.2f = R$ %.2f\n",
+                   i+1, vendas[idx].itens[i].nome_produto, vendas[idx].itens[i].codigo_produto,
+                   vendas[idx].itens[i].quantidade_vendida, vendas[idx].itens[i].preco_unitario,
+                   vendas[idx].itens[i].preco_total);
+        }
 
-    printf("\nPara alterar uma venda, cancele a venda existente e crie uma nova.\n");
+        printf("\nOpcoes de alteracao:\n");
+        printf("1. Adicionar item\n");
+        printf("2. Remover item\n");
+        printf("3. Alterar quantidade de item\n");
+        printf("0. Finalizar alteracoes\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+        limpar_buffer();
+
+        switch (opcao) {
+            case 1: { // Adicionar item
+                if (vendas[idx].num_itens >= MAX_ITENS_VENDA) {
+                    printf("Limite de itens por venda atingido!\n");
+                    break;
+                }
+
+                ItemVenda item;
+                printf("\n--- Adicionar Item ---\n");
+                printf("Codigo do produto: ");
+                scanf("%d", &item.codigo_produto);
+
+                int idx_produto = produto_existe(item.codigo_produto);
+                if (idx_produto == -1) {
+                    printf("Erro: Produto nao encontrado!\n");
+                    break;
+                }
+
+                printf("Quantidade: ");
+                scanf("%d", &item.quantidade_vendida);
+
+                if (item.quantidade_vendida > produtos[idx_produto].quantidade_estoque) {
+                    printf("Erro: Quantidade em estoque insuficiente!\n");
+                    printf("Estoque disponivel: %d\n", produtos[idx_produto].quantidade_estoque);
+                    break;
+                }
+
+                strcpy(item.nome_produto, produtos[idx_produto].nome);
+                item.preco_unitario = produtos[idx_produto].preco_venda;
+                item.preco_total = item.preco_unitario * item.quantidade_vendida;
+
+                produtos[idx_produto].quantidade_estoque -= item.quantidade_vendida;
+                vendas[idx].itens[vendas[idx].num_itens++] = item;
+                vendas[idx].total_venda += item.preco_total;
+
+                // Atualizar comissão do vendedor
+                int idx_vendedor = vendedor_existe(vendas[idx].codigo_vendedor);
+                if (idx_vendedor != -1) {
+                    float percentual = vendedores[idx_vendedor].percentual_comissao / 100;
+                    vendedores[idx_vendedor].comissoes += item.preco_total * percentual;
+                }
+
+                printf("Item adicionado com sucesso!\n");
+                break;
+            }
+            case 2: { // Remover item
+                if (vendas[idx].num_itens == 0) {
+                    printf("Nao ha itens para remover!\n");
+                    break;
+                }
+
+                int item_num;
+                printf("\nNumero do item a remover (1-%d): ", vendas[idx].num_itens);
+                scanf("%d", &item_num);
+                
+                if (item_num < 1 || item_num > vendas[idx].num_itens) {
+                    printf("Numero de item invalido!\n");
+                    break;
+                }
+
+                int item_idx = item_num - 1;
+                int cod_prod = vendas[idx].itens[item_idx].codigo_produto;
+                int qtd = vendas[idx].itens[item_idx].quantidade_vendida;
+                float total_item = vendas[idx].itens[item_idx].preco_total;
+
+                // Devolver ao estoque
+                int idx_prod = produto_existe(cod_prod);
+                if (idx_prod != -1) {
+                    produtos[idx_prod].quantidade_estoque += qtd;
+                }
+
+                // Ajustar comissão do vendedor
+                int idx_vendedor = vendedor_existe(vendas[idx].codigo_vendedor);
+                if (idx_vendedor != -1) {
+                    float percentual = vendedores[idx_vendedor].percentual_comissao / 100;
+                    vendedores[idx_vendedor].comissoes -= total_item * percentual;
+                }
+
+                // Remover item do array
+                for (int i = item_idx; i < vendas[idx].num_itens - 1; i++) {
+                    vendas[idx].itens[i] = vendas[idx].itens[i + 1];
+                }
+                vendas[idx].num_itens--;
+                vendas[idx].total_venda -= total_item;
+
+                printf("Item removido com sucesso!\n");
+                break;
+            }
+            case 3: { // Alterar quantidade
+                if (vendas[idx].num_itens == 0) {
+                    printf("Nao ha itens para alterar!\n");
+                    break;
+                }
+
+                int item_num;
+                printf("\nNumero do item a alterar (1-%d): ", vendas[idx].num_itens);
+                scanf("%d", &item_num);
+                
+                if (item_num < 1 || item_num > vendas[idx].num_itens) {
+                    printf("Numero de item invalido!\n");
+                    break;
+                }
+
+                int item_idx = item_num - 1;
+                int cod_prod = vendas[idx].itens[item_idx].codigo_produto;
+                int idx_prod = produto_existe(cod_prod);
+                
+                if (idx_prod == -1) {
+                    printf("Produto nao encontrado no estoque!\n");
+                    break;
+                }
+
+                int nova_qtd;
+                printf("Nova quantidade (atual: %d, disponivel: %d): ", 
+                       vendas[idx].itens[item_idx].quantidade_vendida,
+                       produtos[idx_prod].quantidade_estoque + vendas[idx].itens[item_idx].quantidade_vendida);
+                scanf("%d", &nova_qtd);
+
+                if (nova_qtd <= 0) {
+                    printf("Quantidade deve ser positiva!\n");
+                    break;
+                }
+
+                int diff = nova_qtd - vendas[idx].itens[item_idx].quantidade_vendida;
+                if (diff > produtos[idx_prod].quantidade_estoque) {
+                    printf("Quantidade em estoque insuficiente! Diferenca: %d\n", diff);
+                    printf("Estoque disponivel: %d\n", produtos[idx_prod].quantidade_estoque);
+                    break;
+                }
+
+                // Ajustar estoque
+                produtos[idx_prod].quantidade_estoque -= diff;
+
+                // Ajustar comissão do vendedor
+                int idx_vendedor = vendedor_existe(vendas[idx].codigo_vendedor);
+                if (idx_vendedor != -1) {
+                    float percentual = vendedores[idx_vendedor].percentual_comissao / 100;
+                    float diff_valor = diff * vendas[idx].itens[item_idx].preco_unitario;
+                    vendedores[idx_vendedor].comissoes += diff_valor * percentual;
+                }
+
+                // Atualizar item
+                vendas[idx].total_venda += diff * vendas[idx].itens[item_idx].preco_unitario;
+                vendas[idx].itens[item_idx].quantidade_vendida = nova_qtd;
+                vendas[idx].itens[item_idx].preco_total = nova_qtd * vendas[idx].itens[item_idx].preco_unitario;
+
+                printf("Quantidade alterada com sucesso!\n");
+                break;
+            }
+            case 0:
+                printf("Alteracoes concluidas.\n");
+                break;
+            default:
+                printf("Opcao invalida!\n");
+        }
+    } while (opcao != 0);
 }
 
 void cancelar_venda() {
